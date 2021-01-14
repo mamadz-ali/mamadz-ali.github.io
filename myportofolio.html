@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfolio</title>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+	<div id="progressbar"></div>
+	<div id="scrollpath"></div>
+	<!--  navbar -->
+	<nav>
+		<img src="img/Brand.png">
+		<a href="index.html">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			Home
+		</a>
+		<a href="myportofolio.html">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			portfolio
+		</a><a href="#">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			about
+		</a><a href="#">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			contact
+		</a>
+	
+	</nav>
+
+	<!-- akhir navbar -->
+	<!-- jumbotron -->
+		<div class="jumbotron text-center">
+			<div class="">
+				<img src="img/jumbotron -profil2.jpg" class="rounded-circle" alt="zoom">
+			</div>
+				<h1>Ahmadz Ali</h1><hr>
+				<h5 class="gradient"><p>Manusia Biasa</p></h5>
+		</div>
+	<!-- akhir jumbotron -->
+
+	<!-- about -->
+		<section class="about" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 class="text-center">About</h2>
+						<hr>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-1 "><a href="https://m.facebook.com/IBNUNGAMBO"><i class="a fa fa-facebook-square fa-3x "></i></a><a href="https://www.instagram.com/ahmadz_alii"><i class="b fa fa-instagram fa-3x b"></i></a></div>
+					<div class="col-sm-5">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum minus aperiam sequi quo omnis, laborum sunt exercitationem repellendus. Impedit placeat veritatis autem repudiandae molestias rem suscipit quidem dignissimos vitae quam.</p>
+					</div>
+					<div class="col-sm-5">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo voluptatum, repudiandae dolore cupiditate rem maiores iure, ad cum. Iste nisi maiores inventore provident tempore tempora. Amet soluta adipisci quos aperiam.</p>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+	<!-- akhir about -->
+	
+
+	<!-- portfolio -->
+		<section class="portfolio" id="portfolio">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 text-center"><br>
+						<h2>Portfolio</h2>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 zoom-without-container">
+						<a href="#">
+								<img src="img/portfolio/1.jpg" alt="" class="img-thumbnail">
+						</a>
+					</div>
+					<div class="col-sm-4 zoom-without-container">
+						<a href="">
+							<img src="img/portfolio/2.jpg" alt="" class="img-thumbnail">
+						</a>
+					</div>
+					<div class="col-sm-4 zoom-without-container">
+						<a href="">
+							<img src="img/portfolio/3.jpg" alt="" class="img-thumbnail">
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- akhir portfolio -->
+	<script type="text/javascript">
+		let progress = document.getElementById('progressbar');
+		let totalHeight = document.body.scrollHeight - window.innerHeight;
+		window.onscroll = function(){
+			let progressHeight = (window.pageYOffset /totalHeight) * 100;
+			progress.style.height = progressHeight + "%";
+		}
+	</script>
+	</body>
+</html>
+

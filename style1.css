@@ -1,0 +1,282 @@
+html {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background: #1c2833;
+}
+body {
+	margin-bottom: 100px;
+	background: #1c2833;
+}
+::-webkit-scrollbar
+{
+	width:0%;
+}
+#scrollpath 
+{
+	position: fixed;
+	top:0;
+	right: 0%;
+	width: 10px;
+	height: 110%;
+	background: rgba(255,255,255,0.05);
+}
+#progressbar 
+{
+	position: fixed;
+	top:0;
+	right: 0%;
+	width: 10px;
+	background: linear-gradient(to top,#008aff,#00ffe7)
+	;
+	animation: animate 5s linear infinite;
+}
+@keyframes animate 
+{
+	0%
+	{
+		filter:hue-rotate(0deg);
+	}
+	50%
+	{
+		filter: hue-rotate(360deg);
+	}
+}
+#progressbar:before 
+{
+	content: '';
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top,#008aff,#00ffe7)
+	;
+	filter: blur(5px);
+}
+#progressbar:after 
+{
+	content: '';
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top,#008aff,#00ffe7)
+	;
+	filter: blur(10px);
+}
+ nav {
+ 	font-family: consolas;
+    display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	justify-content: center;
+	align-content: center;
+	background: #1c2833;
+ }
+ nav img {
+	height: 40px;
+	width: 70px;
+	filter: brightness(150%);
+	left:100%;
+	margin-right: 60vh;
+	margin-top: 1%;
+}
+ a {
+ 	position: relative;
+ 	display: inline-block;
+ 	padding: 10px 30px;
+ 	margin: 0px 3px;
+ 	color: #03e9f4;
+ 	text-decoration: none;
+ 	font-size: 24px;
+ 	background: #17202a;
+ 	text-transform: uppercase;
+ 	overflow: hidden;
+ 	transition: 0.5s;
+ 	letter-spacing: 3px;
+ }
+ a:nth-child(2)
+ {
+ 	filter: hue-rotate(-90deg);
+ }
+ a:nth-child(3)
+ {
+ 	filter: hue-rotate(0deg);
+ }
+ a:nth-child(4)
+ {
+ 	filter: hue-rotate(90deg);
+ }
+ a:nth-child(5)
+ {
+ 	filter: hue-rotate(180deg);
+ }
+
+ a:hover {
+ 	background: #03e9f4; 
+ 	color: #1c2833;
+ 	box-shadow: 0 0 5px #03e9f4,
+ 				0 0 25px #03e9f4,
+ 				0 0 50px #03e9f4;
+ 	text-decoration: none;
+ }
+ a span {
+ 	display: block;
+ 	position: absolute;
+ }
+ a span:nth-child(1)
+ {
+	top:0;
+	right:0%;
+	width:100%;
+	height:2px;
+	background: linear-gradient(90deg,transparent,#03e9f4);
+	animation: animate1 0.5s linear infinite;
+	animation-delay: 0s
+ }
+ @keyframes animate1
+ {
+	0%
+	{
+		left:-50%;
+	}
+	50%,100%
+	{
+		left:100%;
+	}
+ }
+ a span:nth-child(2)
+ {
+ 	top:0%;
+	right:0%;
+	width:2px;
+	height:100%;
+	background: linear-gradient(180deg,transparent,#03e9f4);
+	animation: animate2 0.5s linear infinite;
+	animation-delay: 0.10s
+ }
+ @keyframes animate2
+ {
+	0%
+	{
+		top:-100%;
+	}
+	50%,100%
+	{
+		top:100%;
+	}
+ }
+a span:nth-child(3)
+{
+	bottom: 0%;
+	right:0%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,#03e9f4);
+	animation: animate3 0.5s linear infinite;
+	animation-delay: 0.2s;
+}
+ @keyframes animate3
+ {
+	0%
+	{
+		right:-100%;
+	}
+	50%,100%
+	{
+		right:100%;
+	}
+ }
+
+ 
+ a span:nth-child(4)
+ {
+ 	bottom:0%;
+	left:0%;
+	width:2px;
+	height:100%;
+	background: linear-gradient(360deg,transparent,#03e9f4);
+	animation: animate4 0.5s linear infinite;
+	animation-delay: 0.3s
+ }
+ @keyframes animate4
+ {
+	0%
+	{
+		bottom:-200%;
+	}
+	50%,100%
+	{
+		bottom:100%;
+	}
+}
+.jumbotron {
+	margin-top: 2%;
+	background: url(img/jumbotron.jpg);
+	background-size: 120%;
+}
+.jumbotron img {
+	width: 200px;
+	border: 5px solid #00008B;
+	height: 200px;
+}
+
+div h1 {
+	color: white;
+}
+
+.gradient {
+	color: gradient(left, rgba(39,214,230,1) 0%, rgba(152,235,97,1) 50%, rgba(248,80,50,1) 100%);
+}
+section {
+	color: grey;
+}
+
+hr {
+	width: 250px;
+	border-top: 3px solid #999;
+}
+
+.col-sm-1 a{
+	color: white;
+	padding-top: 0 10%;
+	text-decoration: none;
+	padding: 0%;
+	margin-left: -50%;
+	background: none;
+}
+div p {
+	color: white;
+}
+section {
+	min-height: 700px;
+}
+
+.portfolio {
+	background-color: #eee;
+	position: relative;
+	height: 10px;
+}
+/* Without Container */
+.zoom-without-container {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+.zoom-without-container img{
+	width:100%;
+	height:auto;	
+}
+.zoom-without-container:hover {
+  transform: scale(1.2); 
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height:100px;
+	background-color: #2f4f4f;
+	color: white;
+}
